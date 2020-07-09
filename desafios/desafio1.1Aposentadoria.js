@@ -10,7 +10,7 @@ const somaCont = idade + contribuicao
 
 if (sexo == 'M' && (contribuicao >= 35 || somaCont >= 95)){
     console.log(`${nome} você já pode se aposentar!`)
-} else if (sexo =='F' && (contribuicao >= 30 || somaCont >= 90)){
+} else if (sexo =='F' && (contribuicao >= 30 || somaCont >= 85)){
     console.log(`${nome} você já pode se aposentar!`)
 } else {
     console.log(`${nome} você ainda não pode se aposentar!`)
