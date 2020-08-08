@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.html" %}
 
-<head>
-    <title>Igor Gomes</title>
-    <link rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header>
-        <div class="links">
-            <a href="index.html">Sobre</a>
-            <a href="classes.html">Aulas</a>
-        </div>
-    </header>
+{% block content %}
 
     <div id="wrapper">
         <img src="https://avatars3.githubusercontent.com/u/42951527?s=400&u=c8e3a04ed95bd1f906e63c1e9569e25d5d3391ac&v=4"
@@ -27,6 +14,5 @@
         <a href="https://github.com/igorgms" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/igorgomes8/" target="_blank">Linkedin</a>
     </div>
-</body>
 
-</html>
+{% endblock %}
