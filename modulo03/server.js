@@ -2,12 +2,13 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 
+
 // variavel que inicia o server com o express que foi importado
 const server = express()
 
 server.use(express.static('public'))
 
-server.set('view engine', 'html')
+server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
     express: server
