@@ -88,6 +88,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
+    cursor: pointer;
 }
 
 .card {
@@ -196,4 +197,19 @@ iframe {
     height: 90%;
     position: absolute;
     top: 5%;
+}
+
+/* erro */
+.error {
+    margin-top: 10%;
+}
+
+.error h1{
+    font-size: 60px;
+    text-align: center;
+}
+
+.error p {
+    font-size: 40px;
+    text-align: center;
 }

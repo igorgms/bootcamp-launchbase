@@ -5,14 +5,14 @@ const server = express()
 
 server.use(express.static('public'))
 
-server.set('view engine', 'html')
+server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
     express: server
 })
 
 server.get('/', function(req, res) {
-    return res.render('layout')
+    return res.render('courses')
 })
 
 server.get('/about', function(req, res) {
@@ -23,6 +23,10 @@ server.get('/courses', function(req, res) {
     return res.render('courses')
 })
 
-server.listen(5000, function() {
+server.use(function(req, res) {
+    return res.status(404).render("not-found")
+})
 
+server.listen(5001, function() {
+    console.log('server is running')
 })
