@@ -19,7 +19,7 @@ module.exports = [
     },
     { 
         id: "AqJKAJ0TKms",
-        title: "Criando um PWA com React Native & Expo Web | Code/Drops #34 lllllllllllllllllllllllllllllllll",
+        title: "Criando um PWA com React Native & Expo Web | Code/Drops #34",
         duration: "43 min",
         price: "Free"
     },

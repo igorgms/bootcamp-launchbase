@@ -10,32 +10,20 @@
 
   <div class="container">
     <img src="./images/logo_rocket.png" alt="logo_rocketseat" />
-    <h1>Rocketseat</h1>
-    <h2>
-      As melhores tecnologias em programação, direto ao ponto e do jeito
-      certo.
-    </h2>
+    <h1>{{ about.name }}</h1>
+    <h2>{{ about.description }}</h2>
     <ul>
-      <li>JavaScript</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>Node.js</li>
-      <li>React</li>
-      <li>React Native</li>
+      {% for course in about.courses %}
+        <li>{{ course }}</li>
+      {% endfor %}
     </ul>
   </div>
-  <div id="list"></div>
 
   <div id="links-footer" class="links">
-    <a href="https://github.com/Rocketseat" target="_blank">Github</a>
-    <a
-      href="https://www.instagram.com/rocketseat_oficial/?hl=pt-br"
-      target="_blank"
-      >Instagram</a
-    >
-    <a href="https://www.facebook.com/rocketseat/" target="_blank"
-      >Facebook</a
-    >
+
+    {% for link in about.links %}
+      <a href="{{ link.url }}"target="_blank">{{ link.name }}</a>
+    {% endfor %}
   </div>
 
 {% endblock %}
