@@ -3,7 +3,8 @@ module.exports = [
         id: "GykTLqODQuU",
         title: "Formulário animado com JS puro e CSS Animation | Mayk Brito",
         duration: "57 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     { 
         id: "hka7ay9F1kk",
@@ -21,7 +22,8 @@ module.exports = [
         id: "AqJKAJ0TKms",
         title: "Criando um PWA com React Native & Expo Web | Code/Drops #34",
         duration: "43 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     },
     { 
         id: "SrY8qV6UJ1M",
@@ -33,6 +35,7 @@ module.exports = [
         id: "f7jMO95AHmA",
         title: "Qual teclado o Diego usa? Adonis V5 + Typescript? Sequelize ou TypeORM? O que é Hermes? | #PR 03",
         duration: "16 min",
-        price: "Free"
+        price: "Free",
+        featured: true
     }
 ]
