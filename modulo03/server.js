@@ -13,7 +13,8 @@ server.set("view engine", "njk");
 // configuração do nunjucks que é a template engine, é passado a pasta views, e o express como variável do servidor que está sendo utilizado
 nunjucks.configure("views", {
   express: server,
-  autoescape: false
+  autoescape: false,
+  noCache: true
 });
 
 // criando as rotas, são passados como parâmetros uma requisição e é obtida uma resposta a cerca da requisição
@@ -40,7 +41,22 @@ server.get("/portfolio", function (req, res) {
   return res.render("portfolio", { items: videos });
 });
 
+server.get("/video", function(req, res) {
+  const id = req.query.id
+
+  const video = videos.find(function(video) {
+    return video.id == id
+  })
+
+  if (!video) {
+    return res.send("Video not found!")
+  }
+
+  return res.render("video", { item: video })
+})
+
 // iniciando o servidor na porta 5000
 server.listen(5000, function () {
   console.log("server is running");
 });
+

@@ -4,6 +4,7 @@ module.exports = [
     title: "Formulário animado com JS puro e CSS Animation | Mayk Brito",
     duration: "57 min",
     price: "Free",
+    featured: true
   },
   {
     id: "hka7ay9F1kk",
@@ -16,6 +17,7 @@ module.exports = [
     title: "Expo SDK 38.0 mudou o jogo no React Native | Code/Drops #40",
     duration: "40 min",
     price: "Free",
+    featured: true
   },
   {
     id: "AqJKAJ0TKms",
@@ -28,6 +30,7 @@ module.exports = [
     title: "Deploy de apps ReactJS para Google Cloud Storage (part. Guilherme Pellizzetti) | Masterclass #17",
     duration: "49 min",
     price: "Free",
+    featured: true
   },
   {
     id: "f7jMO95AHmA",
