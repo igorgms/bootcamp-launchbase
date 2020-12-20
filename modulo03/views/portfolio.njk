@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
   <title>Portfolio - Igor Gomes</title>
@@ -13,91 +13,22 @@
   </div>
 
   <section class="cards">
-    <div class="card" id="GykTLqODQuU">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/GykTLqODQuU/maxresdefault.jpg" alt="Video Aula"/>
-      </div>
-      <div class="card_content">
-        <p>Formulário animado com JS puro e CSS Animation | Mayk Brito</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
 
-    <div class="card" id="hka7ay9F1kk">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/hka7ay9F1kk/maxresdefault.jpg" alt="Video Aula"/>
+    {% for item in items %}
+      <div class="card" id="{{item.id}}">
+        <div class="card_image-container">
+          <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}"/>
+        </div>
+        <div class="card_content">
+          <p>{{item.title}}</p>
+        </div>
+        <div class="card_info">
+          <p>{{item.duration}}</p>
+          <p class="card_price">{{item.price}}</p>
+        </div>
       </div>
-      <div class="card_content">
-        <p>
-          Freelancer, Síndrome do Impostor, Site para Portfólio? Tempo e Foco | #PR 12
-        </p>
-      </div>
-      <div class="card_info">
-        <p>27 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
+    {% endfor %}
 
-    <div class="card" id="ZaDpDlPr25M">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/ZaDpDlPr25M/maxresdefault.jpg" alt="Video Aula"/>
-      </div>
-      <div class="card_content">
-        <p>Expo SDK 38.0 mudou o jogo no React Native | Code/Drops #40</p>
-      </div>
-      <div class="card_info">
-        <p>40 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="AqJKAJ0TKms">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/AqJKAJ0TKms/maxresdefault.jpg" alt="Video Aula"/>
-      </div>
-      <div class="card_content">
-        <p>
-          Criando um PWA com React Native & Expo Web | Code/Drops #34 lllllllllllllllllllllllllllllllll
-        </p>
-      </div>
-      <div class="card_info">
-        <p>43 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="SrY8qV6UJ1M">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/SrY8qV6UJ1M/maxresdefault.jpg" alt="Video Aula"/>
-      </div>
-      <div class="card_content">
-        <p>
-          Deploy de apps ReactJS para Google Cloud Storage (part. Guilherme Pellizzetti) | Masterclass #17
-        </p>
-      </div>
-      <div class="card_info">
-        <p>49 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="f7jMO95AHmA">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/f7jMO95AHmA/maxresdefault.jpg" alt="Video Aula"/>
-      </div>
-      <div class="card_content">
-        <p>
-          Qual teclado o Diego usa? Adonis V5 + Typescript? Sequelize ou TypeORM? O que é Hermes? | #PR 03
-        </p>
-      </div>
-      <div class="card_info">
-        <p>16 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
   </section>
 
   <div class="modal-overlay">
